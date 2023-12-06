@@ -1,0 +1,15 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Pets
+        .cards 
+            each pet in data
+                .card 
+                    h2.card__name #{pet.properties.pet_name}
+                    h3.card__type #{pet.properties.pet_type}
+                    p.card__email #{pet.properties.pet_bio}
+        a(href="/update-cobj") Add to this table
